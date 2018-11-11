@@ -16,7 +16,7 @@ def open_connection():
 
 @app.teardown_appcontext   
 def close_connection(exception):
-     connection =g._connection = sqlite3.connect(DBPATH)
+     connection= getattr(g,'_connection',None)
      if connection is not None:
          connection.close()
 
