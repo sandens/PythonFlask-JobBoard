@@ -1,4 +1,4 @@
-{% macro show_job() %}
+{% macro show_job(job) %}
 
 <!-- templates/_marcos.html -->
 <!-- show_job -->
@@ -18,7 +18,7 @@
 </div>
 {% endmacro %}
 
-{%macro show_jobs(jobs) %}
+{% macro show_jobs(jobs) %}
 <div class=" column is-multi-line">
  {{ for job in jobs }}
    <div class=" columns is-half"> 
