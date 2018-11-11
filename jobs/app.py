@@ -1,4 +1,4 @@
-from flask import Fl ask, render_template, g
+from flask import Flask, render_template, g
 import sqlite3
 
 DBPATH="db/jobs.sqlite"
@@ -15,12 +15,10 @@ def open_connection():
 
 
 @app.teardown_appcontext   
-def close_connectin(exception):
+def close_connection(exception):
      connection =g._connection = sqlite3.connect(DBPATH)
      if connection is not None:
          connection.close()
-
-
 
 
 def execute_sql(sql, values=(), commit=False, single=False):
