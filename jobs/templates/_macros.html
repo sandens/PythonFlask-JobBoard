@@ -8,7 +8,7 @@
     </p>
   </header>
   <div class="card-content">
-  <a href url=""> {{ job['employee_name'] }} </a><br/>
+  <a href url=""> {{ job['employer_name'] }} </a><br/>
    ${{ job['salary'] }}<br/>
     {{ job['description'] }}
     <div class="content">
@@ -18,7 +18,7 @@
 {% endmacro %}
 
 {% macro show_jobs(jobs) %}
-<div class=" column is-multi-line">
+<div class="columns is-multi-line">
  {% for job in jobs %}
    <div class=" columns is-half"> 
     {{ show_job(job) }}
