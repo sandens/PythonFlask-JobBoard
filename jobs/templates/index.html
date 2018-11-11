@@ -1,6 +1,14 @@
 {% extends "layout.html" %}
 <html>
-
-<h1>Jobs</h1>
+{% block content %}
+  <div class="columns">
+    <div class="column">
+      <h1>Jobs</h1>
+    </div>
+    <div class="column is-one-fifth">
+    {{ show_jobs(jobs)   }}
+    </div>
+  </div>
+{% endblock %}
 
 </html>
