@@ -28,7 +28,7 @@ def execute_sql(sql, values=(), commit=False, single=False):
     if commit == True:
         results = connection.commit()
     else:
-        results = cursor.fetchOne is single else cursor.fetchall()
+        results = cursor.fetchOne if single else cursor.fetchall()
     return results
 
 
@@ -37,5 +37,3 @@ def execute_sql(sql, values=(), commit=False, single=False):
 def jobs():
     ''' added jobs route'''
     return render_template("index.html")
-    
-
