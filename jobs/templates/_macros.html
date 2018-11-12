@@ -3,7 +3,7 @@
 <!-- show_job -->
 <div class="card adjust-height">
   <header class="card-header">
-  <a href url=""> {{ job['title'] }} </a>
+  <a href url="{{ url_for('job', job_id=job['id']) }}"> {{ job['title'] }} </a>
     <p class="card-header-title">
     </p>
   </header>
